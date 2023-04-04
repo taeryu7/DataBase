@@ -28,3 +28,33 @@ SELECT name, age FROM customers;
 결과 정렬
 SELECT * FROM customers WHERE age > 21 ORDER BY age DESC;
 
+CASE로 변환
+SELECT name, CASE WHEN age > 18 THEN "adult" ELSE "minor" END "type" FROM customers;
+
+
+데이터 집계
+
+집계 함수
+SELECT MAX(age) FROM customers;
+
+데이터 그룹화
+SELECT gender, COUNT(*) FROM students GROUP BY gender;
+
+
+관련 테이블에 조인
+
+Inner join
+SELECT customers.name, orders.item FROM customers JOIN orders ON customers.id = orders.customer_id;
+
+Outer join
+SELECT customers.name, orders.item FROM customers LEFT OUTER JOIN orders ON customers.id = orders.customer_id;
+
+
+데이터 업데이트 및 삭제
+
+데이터 업데이트
+UPDATE customers SET age = 33 WHERE id = 73;
+
+데이터 삭제
+DELETE FROM customers WHERE id = 73;
+
