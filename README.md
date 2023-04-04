@@ -10,6 +10,13 @@ CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, age INTEGER, weight R
 기본키 사용
 CREATE TABLE customers (id INTEGER PRIMARY KEY, age INTEGER);
 
+데이터 삽입
+INSERT INTO customers VALUES (73, "Brian", 33);
+
+명명된 열에 대한 데이터 삽입
+INSERT INTO customers (name, age) VALUES ("Brian", 33);
+
+
 전체 선택
 SELECT * FROM customers;
 
